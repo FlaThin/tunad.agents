@@ -28,6 +28,7 @@ jobs:
     needs: [level-1-lint, level-1-test]
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       issues: read
       pull-requests: write
     steps:
