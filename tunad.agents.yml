@@ -1,0 +1,22 @@
+index:
+  # TypeScript / Node
+  - pattern: '^export (async )?function|^export const|^export class|^export default|^export interface|^export type'
+    glob: "**/*.{ts,tsx}"
+  - pattern: '^(async )?function|^const \w+ ='
+    glob: "**/*.{js,mjs}"
+
+  # Python
+  - pattern: '^def |^async def |^class '
+    glob: "**/*.py"
+
+  # Go
+  - pattern: '^func |^type .* struct|^type .* interface'
+    glob: "**/*.go"
+
+  # .NET (C#)
+  - pattern: '^\s*(public|private|protected|internal).*(class|interface|record|void|async Task|Task<|static)'
+    glob: "**/*.cs"
+
+checks:
+  lint: bun run lint
+  test: bun test
