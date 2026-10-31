@@ -1,6 +1,9 @@
 # dependencies (bun install)
 node_modules
 
+# generated index
+.tunad-index.txt
+
 # output
 out
 dist
